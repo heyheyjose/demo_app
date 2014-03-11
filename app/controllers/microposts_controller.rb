@@ -1,5 +1,5 @@
 class MicropostsController < ApplicationController
-  before_action :set_micropost, only: [:show, :edit, :update, :destroy]
+  before_action :set_micropost, only: [:show, :edit, :update] # :destroy
 
   # GET /microposts
   # GET /microposts.json
@@ -53,13 +53,13 @@ class MicropostsController < ApplicationController
 
   # DELETE /microposts/1
   # DELETE /microposts/1.json
-  def destroy
-    @micropost.destroy
-    respond_to do |format|
-      format.html { redirect_to microposts_url }
-      format.json { head :no_content }
-    end
-  end
+  # def destroy
+  #   @micropost.destroy
+  #   respond_to do |format|
+  #     format.html { redirect_to microposts_url }
+  #     format.json { head :no_content }
+  #   end
+  # end
 
   private
     # Use callbacks to share common setup or constraints between actions.
